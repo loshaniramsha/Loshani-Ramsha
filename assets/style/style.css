@@ -56,6 +56,7 @@
     font-size: 32px;
     font-weight: 700;
     color: #00abf0;
+    animation:  stroke-offset 5.5s infinite ;
 }
 .home-container p{
     font-size: 20px;
