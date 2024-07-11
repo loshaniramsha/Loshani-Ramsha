@@ -647,125 +647,6 @@ span{
 
 
 
-/* Skills Section */
-
-/* Skills Section */
-.skills {
-    padding: 7rem 0;
-    background: var(--primary-color);
-}
-
-.skills .heading {
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-.skills .heading span {
-    color: var(--secondary-color);
-}
-
-.skills .skills-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-    justify-content: center;
-}
-
-.skills .skills-column {
-    flex: 1 1 40rem;
-    max-width: 500px;
-    gap: 5rem;
-}
-
-.skills .skills-column .title {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.skills .skills-box {
-    padding: 2rem;
-    border: 0.2rem solid var(--secondary-color);
-    border-radius: 0.6rem;
-    background: rgba(255, 255, 255, 0.1); /* Adding a subtle background color */
-}
-
-.skills .skill-content .progress {
-    padding: 1rem 0;
-}
-
-.skills .skill-content .progress h3 {
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    color: #ffffff; /* Adding color to the progress titles */
-}
-
-.skills .skill-content .progress h3 span {
-    gap: 5rem;
-    color: var(--secondary-color);
-}
-
-.skills .skill-content .progress .bar {
-    position: relative;
-    height: 2.5rem;
-    border-radius: 0.6rem;
-    border: 0.2rem solid var(--secondary-color);
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.skills .skill-content .progress .bar span {
-    position: absolute;
-    height: 100%;
-    border-radius: 0.6rem;
-    background: var(--secondary-color);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Adding a shadow for better depth */
-    transition: width 0.5s ease-in-out; /* Adding a smooth transition effect */
-}
-
-.skills .skills-column:nth-child(1) .skill-content .progress:nth-child(1) .bar span {
-    width: 90%;
-}
-
-.skills .skills-column:nth-child(1) .skill-content .progress:nth-child(2) .bar span {
-    width: 90%;
-}
-
-.skills .skills-column:nth-child(1) .skill-content .progress:nth-child(3) .bar span {
-    width: 90%;
-}
-
-.skills .skills-column:nth-child(1) .skill-content .progress:nth-child(4) .bar span {
-    width: 90%;
-}
-
-.skills .skills-column:nth-child(2) .skill-content .progress:nth-child(1) .bar span {
-    width: 90%;
-}
-
-.skills .skills-column:nth-child(2) .skill-content .progress:nth-child(2) .bar span {
-    width: 90%;
-}
-
-.skills .skills-column:nth-child(2) .skill-content .progress:nth-child(3) .bar span {
-    width: 90%;
-}
-
-.skills .skills-column:nth-child(2) .skill-content .progress:nth-child(4) .bar span {
-    width: 90%;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .skills .skills-row {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 /*Contact*/
 .contact{
     min-height: auto;
@@ -834,4 +715,107 @@ span{
     display: flex;
     justify-content: center;
     background-color: #00abf0;
+}
+
+
+/* Skills Section */
+.skills {
+    padding: 7rem 0;
+    background-color: #081b29;
+    color: #ededed;
+}
+
+.skills .heading {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.skills .heading span {
+    color: #00abf0;
+}
+
+.skills .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills .skills-column {
+    flex: 1 1 40rem;
+    margin: 1rem;
+}
+
+.skills .skills-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills .skills-column li {
+    margin-bottom: 1.5rem;
+}
+
+.skills .skills-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills .skills-column .bar {
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.6rem;
+    overflow: hidden;
+    height: 1.2rem;
+    position: relative;
+    border: 0.2rem solid #00abf0;
+    transition: 0.3s;
+}
+
+.skills .skills-column .bar span {
+    display: block;
+    height: 100%;
+    background: #00abf0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.3rem;
+    animation: grow 2s ease-in-out forwards;
+}
+
+/* Define the keyframes for the animation */
+@keyframes grow {
+    0% { width: 0; }
+    100% { width: var(--bar-width); }
+}
+
+/* Initial widths for bar spans using CSS variables */
+.skills .skills-column .html { --bar-width: 90%; }
+.skills .skills-column .css { --bar-width: 80%; }
+.skills .skills-column .javascript { --bar-width: 95%; }
+.skills .skills-column .jquery { --bar-width: 70%; }
+.skills .skills-column .web-design { --bar-width: 90%; }
+.skills .skills-column .web-development { --bar-width: 60%; }
+.skills .skills-column .desktop-application { --bar-width: 50%; }
+.skills .skills-column .ui-ux-design { --bar-width: 50%; }
+
+/* Hover state to re-trigger the animation */
+.skills:hover .skills-column .bar span {
+    animation: grow 2s ease-in-out forwards;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skills .skills-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills .skills-column {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .skills .skills-column .bar {
+        width: 20rem;
+    }
 }
