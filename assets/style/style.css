@@ -1,209 +1,16 @@
-/*@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap";
 
-:root {
-    --primary-color: #081b29;
-    --secondary-color: #00abf0;
-    --second-big-color: #ededed;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-#body{
-    background-color: #081b29;
-    color: #ededed;
-}
-#header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    background: transparent;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    z-index: 100;
-}
-#nav a{
-    font-size: 20px;
-    color: #ededed;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
-    transition: .3s;
-}
-#nav a:hover, #nav a.active{
-    color: #00abf0;
-    transition: 0.3s;
-
-}
-
-
-!*home*!
-.home{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 10% 10%;
-}
-.home-container{
-    max-width: 600px;
-}
-.home-container h1{
-    font-size: 56px;
-    font-weight: 700;
-    margin-left: 10px;
-
-}
-.home-container h3{
-    font-size: 32px;
-    font-weight: 700;
-    color: #00abf0;
-    animation:  stroke-offset 5.5s infinite ;
-}
-.home-container p{
-    font-size: 20px;
-    margin: 20px 0 40px;
-}
-.home-container .btn-box{
-    display: flex;
-    justify-content: space-between;
-    width: 345px;
-    margin-top: 20px;
-}
-.home-container .btn-box a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 50px;
-    background: #00abf0;
-    border-radius: 6px;
-    font-size: 18px;
-    color: #081b29;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
-.btn-box a:nth-child(2){
-    background: transparent;
-    color: #00abf0;
-    border: 2px solid #00abf0;
-    margin-left: 20px;
-}
-.btn-box a:nth-child(1):hover{
-    background: transparent;
-    color: black;
-    border: 2px solid #00abf0;
-    transition: 0.3s;
-}
-.btn-box a:nth-child(2):hover{
-    background: transparent;
-    color: black;
-    border: 2px solid #00abf0;
-    transition: 0.3s;
-}
-.btn-box a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background:#00abf0;
-    border-radius: 6px;
-    z-index: -1;
-    transition: .5s;
-}
-.btn-box a:hover::before{
-    width: 100%;
-}
-
-!*home Social Media*!
-.home-social{
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.home-social a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border: 2px solid #00abf0;
-    border-radius: 6px;
-    margin: 20px 0;
-    color: #00abf0;
-    text-decoration: none;
-    font-size: 20px;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.home-social a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #00abf0;
-    z-index: -1;
-    transition: .5s;
-}
-
-.home-social a:hover::before{
-    width: 100%;
-}
-.home-social a:hover i{
-    color: #081b29;
-    transform: scale(1.5);
-}
-.home-img{
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 700px;
-    height: 100vh;
-    object-fit: cover;
-    opacity: 0.3;
-    z-index: -1;
-}
-
-!*animation*!
-
-.home-img img{
-    width: 90%;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-.home-img img:hover{
-    background-color: #081b29;
-    transition: 0.5s;
-    opacity: .9;
-}*/
 
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap";
+
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+
 
 :root {
     --primary-color: #081b29;
     --secondary-color: #03a2dc;
     --second-big-color: #ededed;
 }
+
 
 * {
     margin: 0;
@@ -217,46 +24,6 @@
     color: var(--second-big-color);
 }
 
-/*
-.header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    padding: 20px 100px;
-    background: transparent;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    z-index: 100;
-}
-
-#menu-icon{
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: var(--second-big-color);
-}
-
-.navbar {
-    display: flex;
-    gap: 20px;
-}
-
-#nav a{
-    font-size: 20px;
-    color: var(--second-big-color);
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
-    transition: .3s;
-}
-
-#nav a:hover, #nav a.active{
-    color: var(--secondary-color);
-    transition: 0.3s;
-}
-*/
 
 
 #header{
@@ -818,4 +585,168 @@ span{
     .skills .skills-column .bar {
         width: 20rem;
     }
+}
+
+/*project*/
+#project{
+    background-color: #081b29;
+}
+p,a,h1,h2,h3,h4,h5,h6,ul,li {
+    margin: 0;
+    padding: 0;
+}
+
+.section-services {
+    font-family: "Poppins", sans-serif;
+    background-color: #e6edf7;
+    color: #202020;
+    padding-top: 115px;
+    padding-bottom: 120px;
+}
+
+.section-services .header-section {
+    margin-bottom: 34px;
+}
+
+.section-services .header-section .title {
+    position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.section-services .header-section .title:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #00abf0;
+    border-radius: 3px;
+}
+
+.section-services .header-section .title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(30px);
+    width: 10px;
+    height: 3px;
+    background-color:  #fff;
+    border-radius: 3px;
+}
+
+.section-services .header-section .description {
+    font-size: 14px;
+    color: #282828;
+}
+
+.section-services .single-service {
+    position: relative;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    overflow: hidden;
+}
+
+.section-services .single-service .content {
+    position: relative;
+    z-index: 20;
+}
+
+.section-services .single-service .circle-before {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    transform: translate(40%, -40%);
+    width: 150px;
+    height: 150px;
+    background-color: #00abf0;
+    border: 6px solid  #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 10;
+    transition: all .6s;
+}
+
+.section-services .single-service:hover .circle-before {
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border: 0;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.section-services .single-service .icon {
+    display: inline-block;
+    margin-bottom: 26px;
+    width: 70px;
+    height: 70px;
+    background-color: #00abf0;
+    border-radius: 5px;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    transition: all .3s;
+}
+
+.section-services .single-service:hover .icon {
+    background-color: #fff;
+    color: #00abf0;
+}
+
+.section-services .single-service .title {
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 23px;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover .title {
+    color: #fff;
+}
+
+.section-services .single-service .description {
+    margin-bottom: 20px;
+    font-size: 14px;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover .description {
+    color: #fff;
+}
+
+.section-services .single-service a {
+    position: relative;
+    font-size: 18px;
+    color: #202020;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover a {
+    color: #fff;
+}
+
+.section-services .single-service a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #00abf0;
+    transition: background-color .3s;
+}
+
+.section-services .single-service:hover a:after {
+    background-color: #fff;
 }
